@@ -1,8 +1,10 @@
 # Add  code here!
 def prime?(number)
-  if (2..number/2).none?{|i| number % 1 == 0}
-    return true
-  else
+  if number < 0 or number == 0 or number == 1
     return false
+  else
+    (2..number-1).to_a.all? do |possible_factor|
+      number % possible_factor != =
+    end
   end
 end
